@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 
 import CounterClass from './CounterClass'
 
-describe('CounterClass test', () => {
+describe('CounterClass test – JSDOM', () => {
   it('should render valid initial number', () => {
     const div = document.createElement('div')
 
