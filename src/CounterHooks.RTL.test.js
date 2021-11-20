@@ -9,18 +9,20 @@ describe('CounterHooks test – React Testing Library', () => {
   it('should render valid initial number', () => {
     const { container } = render(<CounterHooks />)
 
-    const h1 = container.querySelector('h1')
+    const numberDisplay = container.querySelector('[data-testid="counter__number-display"]')
 
-    expect(h1.textContent).toBe('0')
+    expect(numberDisplay.textContent).toBe('0')
   })
 
   it('should render valid number after button click', () => {
-    const { getByText } = render(<CounterHooks />)
+    const { getByTestId } = render(<CounterHooks />)
 
-    const button = getByText('+')
+    const button = getByTestId('counter__button--inc')
 
     fireEvent.click(button)
 
-    expect(getByText('1')).toBeInTheDocument()
+    const numberDisplay = getByTestId('counter__number-display')
+
+    expect(numberDisplay).toHaveTextContent('1')
   })
 })

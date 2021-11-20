@@ -7,10 +7,13 @@ export const CounterHooks = () => {
 
   return (
     <div>
-      <h1>
+      <h1
+        data-testid={'counter__number-display'}
+      >
         {number}
       </h1>
       <button
+        data-testid={'counter__button--inc'}
         onClick={inc}
       >
         +
