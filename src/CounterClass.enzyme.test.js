@@ -17,6 +17,12 @@ describe('CounterClass test – Enzyme', () => {
   })
 
   it('should render valid number after button click', () => {
+    const wrapper = shallow(<CounterClass />)
+    const instance = wrapper.instance()
 
+    instance.setState({ number: 5 })
+
+    const h1 = wrapper.find('h1')
+    expect(h1.text()).toBe('5')
   })
 })
