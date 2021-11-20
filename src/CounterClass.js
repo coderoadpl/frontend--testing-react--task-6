@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Button from './Button'
+
 export class CounterClass extends React.Component {
   state ={
     number: 0
@@ -16,11 +18,11 @@ export class CounterClass extends React.Component {
         <h1>
           {number}
         </h1>
-        <button
+        <Button
           onClick={this.inc}
         >
           +
-        </button>
+        </Button>
       </div>
     )
   }

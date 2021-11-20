@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Button from './Button'
+
 export const CounterHooks = () => {
   const [number, setNumber] = React.useState(0)
 
@@ -12,12 +14,12 @@ export const CounterHooks = () => {
       >
         {number}
       </h1>
-      <button
+      <Button
         data-testid={'counter__button--inc'}
         onClick={inc}
       >
         +
-      </button>
+      </Button>
     </div>
   )
 }
