@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CounterHooks test – React Testing Library should match snapshot 1`] = `
+<DocumentFragment>
+  <div>
+    <h1
+      data-testid="counter__number-display"
+    >
+      0
+    </h1>
+    <button
+      data-testid="counter__button--inc"
+    >
+      +
+    </button>
+  </div>
+</DocumentFragment>
+`;

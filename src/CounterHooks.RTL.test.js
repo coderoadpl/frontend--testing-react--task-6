@@ -6,6 +6,11 @@ import '@testing-library/jest-dom'
 import CounterHooks from './CounterHooks'
 
 describe('CounterHooks test – React Testing Library', () => {
+  it('should match snapshot', () => {
+    const { asFragment } = render(<CounterHooks />)
+    expect(asFragment()).toMatchSnapshot()
+  })
+
   it('should render valid initial number', () => {
     const { container } = render(<CounterHooks />)
 
