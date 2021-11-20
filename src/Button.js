@@ -9,6 +9,7 @@ export const Button = (props) => {
 
   return (
     <button
+      style={{ borderRadius: '50%' }}
       {...otherProps}
     >
       {children}
