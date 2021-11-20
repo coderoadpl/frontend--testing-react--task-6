@@ -18,9 +18,10 @@ describe('CounterHooks test – Enzyme', () => {
 
   it('should render valid number after button click', () => {
     const wrapper = shallow(<CounterHooks />)
-    const instance = wrapper.instance()
 
-    instance.setState({ number: 5 })
+    const button = wrapper.find('button')
+
+    for (let i = 0; i < 5; i++) button.simulate('click')
 
     const h1 = wrapper.find('h1')
     expect(h1.text()).toBe('5')
